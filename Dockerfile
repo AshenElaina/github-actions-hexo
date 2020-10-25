@@ -13,7 +13,7 @@ COPY README.md LICENSE entrypoint.sh /
 
 RUN apt update
 
-RUN apt install --no-cache git \
+RUN apt install git \
         openssh \
         curl \
         pandoc
