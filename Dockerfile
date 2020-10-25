@@ -14,7 +14,6 @@ COPY README.md LICENSE entrypoint.sh /
 RUN apt update
 
 RUN apt install git \
-        openssh \
         curl \
         pandoc
 
