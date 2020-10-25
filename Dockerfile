@@ -1,4 +1,4 @@
-FROM node:13-alpine
+FROM node:13-stretch
 
 LABEL "name"="hexo-github-action"
 LABEL "maintainer"="yrpang <yrpang@outlook.com>"
@@ -11,9 +11,9 @@ LABEL "com.github.actions.color"="green"
 
 COPY README.md LICENSE entrypoint.sh /
 
-RUN apk add --no-cache ca-certificates
+RUN apt update
 
-RUN apk add --no-cache git \
+RUN apt install --no-cache git \
         openssh \
         curl \
         pandoc
