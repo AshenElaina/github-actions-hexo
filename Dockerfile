@@ -13,7 +13,7 @@ COPY README.md LICENSE entrypoint.sh /
 
 RUN apt update
 
-RUN apt install git \
+RUN apt install -y git \
         curl \
         pandoc
 
