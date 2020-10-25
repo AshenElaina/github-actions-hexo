@@ -16,6 +16,10 @@ RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache git \
         openssh \
         curl
+# c.f. https://github.com/theme-next/hexo-theme-next/issues/1454
+RUN wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
+
+RUN sudo dpkg -i pandoc-2.10.1-1-amd64.deb
 
 RUN chmod +x /entrypoint.sh
 
